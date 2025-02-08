@@ -5,8 +5,8 @@ import io.cucumber.testng.CucumberOptions;
 import io.cucumber.testng.AbstractTestNGCucumberTests;
 
 @CucumberOptions(
-        features = "src/test/features/applyGoldCard.feature",
-        glue = "src/test/java/stepDefinitions/applyForGoldCard.java",
+        features = "src/test/features",
+        glue = "stepDefinitions",
         plugin = {"pretty", "html:target/cucumber-reports.html"},
         tags = "@run"
 )

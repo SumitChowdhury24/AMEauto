@@ -22,7 +22,7 @@ public class goldCardDescPage {
     }
 
     //Business Logic
-    public void clickOnDemandCartesLink(){
+    public void clickOnDemandCartesLink() {
         getDemandCartesLink().click();
     }
 
