@@ -1,0 +1,6 @@
+pages\userDetailsPage.class
+pages\goldCardDescPage.class
+pages\allCardsPage.class
+utilities\webDriverSetup.class
+listeners\hooks.class
+pages\ameHomePage.class
