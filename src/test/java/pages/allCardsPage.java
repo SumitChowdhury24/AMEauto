@@ -8,7 +8,7 @@ public class allCardsPage {
     WebDriver driver;
 
     //Locators
-    By goldCartesLink = By.xpath("//span[text()='Carte Gold American Express']");
+    By link_goldCartes = By.xpath("//span[text()='Carte Gold American Express']");
 
     //Constructor
     public allCardsPage(WebDriver driver) {
@@ -16,13 +16,13 @@ public class allCardsPage {
     }
 
     //BrowserActions
-    public WebElement getgoldCartesLink() {
-        return driver.findElement(goldCartesLink);
+    public WebElement getGoldCartesLink() {
+        return driver.findElement(link_goldCartes);
     }
 
     //Business Logic
     public void clickOnGoldCartesLink(){
-        getgoldCartesLink().click();
+        getGoldCartesLink().click();
     }
 
 

@@ -7,9 +7,7 @@ public class goldCardDescPage {
     WebDriver driver;
 
     //Locators
-    //By demandCartesLink = By.linkText("Demandez votre Cart");
-    //Incase linktext doesnt work
-    By demandCartesLink = By.xpath("(//a[text()='Demandez votre Carte']//ancestor::span[1])[2]");
+    By link_demandCartes = By.xpath("(//a[text()='Demandez votre Carte']//ancestor::span[1])[2]");
 
     //Constructor
     public goldCardDescPage(WebDriver driver) {
@@ -18,7 +16,7 @@ public class goldCardDescPage {
 
     //BrowserActions
     public WebElement getDemandCartesLink() {
-        return driver.findElement(demandCartesLink);
+        return driver.findElement(link_demandCartes);
     }
 
     //Business Logic

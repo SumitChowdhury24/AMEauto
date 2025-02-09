@@ -10,46 +10,44 @@ public class userDetailsPage {
     WebDriver driver;
 
     //Locators
-    By civiliteMrRadio = By.xpath("//input[@type='radio' and @value='MR']//following-sibling::label[1]");
-    By civiliteMSRadio = By.xpath("//input[@type='radio' and @value='MS']//following-sibling::label[1]");
-    By firstNameInput = By.xpath("//input[@id='fieldControl-input-firstName']");
-    By lastNameInput = By.xpath("//input[@id='fieldControl-input-lastName']");
-    By dobInput = By.xpath("//input[@id='fieldControl-input-dateOfBirth']");
-    By emailInput = By.xpath("//input[@id='fieldControl-input-email']");
-    By mobileNumberInput = By.xpath("//input[@id='fieldControl-input-mobilePhoneNumber']");
-    By saveButton = By.xpath("//button[text()='Sauvegarder et Continuer']");
+    By rad_civiliteMR = By.xpath("//input[@type='radio' and @value='MR']//following-sibling::label[1]");
+    By rad_civiliteMS = By.xpath("//input[@type='radio' and @value='MS']//following-sibling::label[1]");
+    By inp_firstName = By.xpath("//input[@id='fieldControl-input-firstName']");
+    By inp_lastName = By.xpath("//input[@id='fieldControl-input-lastName']");
+    By inp_Dob = By.xpath("//input[@id='fieldControl-input-dateOfBirth']");
+    By inp_Email = By.xpath("//input[@id='fieldControl-input-email']");
+    By inp_mobileNumber = By.xpath("//input[@id='fieldControl-input-mobilePhoneNumber']");
+    By btn_Save = By.xpath("//button[text()='Sauvegarder et Continuer']");
     //By saveButton = By.xpath("//div[@class='row pad-0 text-align-center-sm-down margin-4-tb']");
-    By birthNameCheckbox = By.xpath("//input[@type='checkbox' and @name='birthNameCheck']//following-sibling::label[1]");
-    By placeOfBirthInput = By.xpath("//input[@id='fieldControl-input-placeOfBirth']");
-    By depOfBirthSelect = By.xpath("//select[@id='fieldControl-input-departmentOfBirth']");
-    By addrsLine1Input = By.xpath("//input[@id='fieldControl-input-residentialAddressLine2']");
-    By postcodeInput = By.xpath("//input[@id='fieldControl-input-postcode']");
-    By villageInput = By.xpath("//input[@id='fieldControl-input-cityTown']");
-    By residentialStatusSelect = By.xpath("//select[@id='fieldControl-input-personalResidentialStatus']");
-    By saveContinueButton = By.xpath("//button[text()='Sauvegarder et Continuer']");
-    By IbanInput = By.xpath("//input[@id='fieldControl-input-bankAccountNumber']");
-    By swiftcodeInput = By.xpath("//input[@id='fieldControl-input-bankIdentifierCode']");
-    By tenureOfAcctSelect = By.xpath("//select[@id='fieldControl-input-tenureOfAccount']");
-    By annualIncomeInput = By.xpath("//input[@id='fieldControl-input-annualPersonalIncome']");
-    By hasAdditionalIncomreRadio = By.xpath("//input[@type='radio' and @id='hasAdditionalIncome1-NO']//following-sibling::label[1]");
-    By totalAssetSelect = By.xpath("//select[@id='fieldControl-input-totalAssets']");
-    By occupationSelect = By.xpath("//select[@id='fieldControl-input-occupation']");
-    By occupationDescSelect = By.xpath("//select[@id='fieldControl-input-occupationDescription']");
-    //SandC
-    By motherMaidenNameInput = By.xpath("//input[@id='fieldControl-input-mothersMaidenName']");
-    //By birthPlaceCheckbox = By.xpath("//input[@type='checkbox' and @name='birthNameCheck']//following-sibling::label[1]");
-    By firstPinInput = By.xpath("//input[@id='fieldControl-input-pin']");
-    By secondPinInput = By.xpath("//input[@id='fieldControl-input-confirmPin']");
-    By receiveMarketEmailNoRadio = By.xpath("//input[@type='radio' and @id='marketingEmailPreferences-false']//following-sibling::label[1]");
-    By receiveMarketEmailYesRadio = By.xpath("//input[@type='radio' and @id='marketingEmailPreferences-false']//following-sibling::label[1]");
-    By receiveMarketSmsRadio = By.xpath("//input[@type='radio' and @id='marketingSMSPhonePostalPreferences-OPT_OUT']//following-sibling::label[1]");
-    By submitButton = By.xpath("//button[text()='Soumettre']");
-    By continueButton = By.xpath("//button[text()='Continuer']");
-    By acceptCookiesButton = By.xpath("//button[text()='Tout Accepter']");
-    By acceptPrivacy = By.xpath("//input[@type='checkbox' and @name='checkbox-1']//following-sibling::label[1]");
-    By passwordInp = By.xpath("//input[@id='cuf']");
-    By finalSubmit = By.xpath("//button[@id='submitBtn']");
-    By finalPageSubmit = By.xpath("//button[text()='Fermez la Page']");
+    By chkbox_birthName = By.xpath("//input[@type='checkbox' and @name='birthNameCheck']//following-sibling::label[1]");
+    By inp_placeOfBirth = By.xpath("//input[@id='fieldControl-input-placeOfBirth']");
+    By slct_depOfBirth = By.xpath("//select[@id='fieldControl-input-departmentOfBirth']");
+    By inp_addrsLine1 = By.xpath("//input[@id='fieldControl-input-residentialAddressLine2']");
+    By inp_Postcode = By.xpath("//input[@id='fieldControl-input-postcode']");
+    By inp_Village = By.xpath("//input[@id='fieldControl-input-cityTown']");
+    By slct_residentialStatus = By.xpath("//select[@id='fieldControl-input-personalResidentialStatus']");
+    By btn_saveContinue = By.xpath("//button[text()='Sauvegarder et Continuer']");
+    By inp_Iban = By.xpath("//input[@id='fieldControl-input-bankAccountNumber']");
+    By inp_Swiftcode = By.xpath("//input[@id='fieldControl-input-bankIdentifierCode']");
+    By slct_tenureOfAcct = By.xpath("//select[@id='fieldControl-input-tenureOfAccount']");
+    By inp_annualIncome = By.xpath("//input[@id='fieldControl-input-annualPersonalIncome']");
+    By rad_hasAdditionalIncome = By.xpath("//input[@type='radio' and @id='hasAdditionalIncome1-NO']//following-sibling::label[1]");
+    By slct_totalAsset = By.xpath("//select[@id='fieldControl-input-totalAssets']");
+    By slct_Occupation = By.xpath("//select[@id='fieldControl-input-occupation']");
+    By slct_OccupationDesc = By.xpath("//select[@id='fieldControl-input-occupationDescription']");
+    By inp_motherMaidenName = By.xpath("//input[@id='fieldControl-input-mothersMaidenName']");
+    By inp_firstPin = By.xpath("//input[@id='fieldControl-input-pin']");
+    By inp_secondPin = By.xpath("//input[@id='fieldControl-input-confirmPin']");
+    By rad_ReceiveMarketEmailNo = By.xpath("//input[@type='radio' and @id='marketingEmailPreferences-false']//following-sibling::label[1]");
+    By rad_ReceiveMarketEmailYes = By.xpath("//input[@type='radio' and @id='marketingEmailPreferences-false']//following-sibling::label[1]");
+    By rad_ReceiveMarketSms = By.xpath("//input[@type='radio' and @id='marketingSMSPhonePostalPreferences-OPT_OUT']//following-sibling::label[1]");
+    By btn_Submit = By.xpath("//button[text()='Soumettre']");
+    By btn_Continue = By.xpath("//button[text()='Continuer']");
+    By btn_AcceptCookies = By.xpath("//button[text()='Tout Accepter']");
+    By chckbox_acceptPrivacy = By.xpath("//input[@type='checkbox' and @name='checkbox-1']//following-sibling::label[1]");
+    By inp_smsPassword = By.xpath("//input[@id='cuf']");
+    By btn_finalSubmit = By.xpath("//button[@id='submitBtn']");
+    By btn_finalPageSubmit = By.xpath("//button[text()='Fermez la Page']");
 
 
     //Constructor
@@ -58,110 +56,105 @@ public class userDetailsPage {
     }
 
     //BrowserActions
-    public WebElement getciviliteMrRadio() { return driver.findElement(civiliteMrRadio);}
+    public WebElement getciviliteMrRadio() { return driver.findElement(rad_civiliteMR);}
     public WebElement getciviliteMSRadio() {
-        return driver.findElement(civiliteMSRadio);
+        return driver.findElement(rad_civiliteMS);
     }
     public WebElement getfirstNameInput() {
-        return driver.findElement(firstNameInput);
+        return driver.findElement(inp_firstName);
     }
     public WebElement getlastNameInput() {
-        return driver.findElement(lastNameInput);
+        return driver.findElement(inp_lastName);
     }
     public WebElement getdobInput() {
-        return driver.findElement(dobInput);
+        return driver.findElement(inp_Dob);
     }
     public WebElement getemailInput() {
-        return driver.findElement(emailInput);
+        return driver.findElement(inp_Email);
     }
     public WebElement getmobileNumberInput() {
-        return driver.findElement(mobileNumberInput);
+        return driver.findElement(inp_mobileNumber);
     }
-    public WebElement getsaveButton() {return driver.findElement(saveButton);}
-    public WebElement getBirthNameCheckbox() {return driver.findElement(birthNameCheckbox);}
+    public WebElement getsaveButton() {return driver.findElement(btn_Save);}
+    public WebElement getBirthNameCheckbox() {return driver.findElement(chkbox_birthName);}
     public WebElement getdepOfBirthSelect() {
-        return driver.findElement(depOfBirthSelect);
+        return driver.findElement(slct_depOfBirth);
     }
 
     public WebElement getplaceOfBirthInput() {
-        return driver.findElement(placeOfBirthInput);
+        return driver.findElement(inp_placeOfBirth);
     }
     public WebElement getaddrsLine1Input() {
-        return driver.findElement(addrsLine1Input);
+        return driver.findElement(inp_addrsLine1);
     }
     public WebElement getpostcodeInput() {
-        return driver.findElement(postcodeInput);
+        return driver.findElement(inp_Postcode);
     }
     public WebElement getvillageInput() {
-        return driver.findElement(villageInput);
+        return driver.findElement(inp_Village);
     }
     public WebElement getresidentialStatusSelect() {
-        return driver.findElement(residentialStatusSelect);
+        return driver.findElement(slct_residentialStatus);
     }
     public WebElement getsaveContinueButton() {
-        return driver.findElement(saveContinueButton);
+        return driver.findElement(btn_saveContinue);
     }
     public WebElement getIbanInput() {
-        return driver.findElement(IbanInput);
+        return driver.findElement(inp_Iban);
     }
     public WebElement getswiftcodeInput() {
-        return driver.findElement(swiftcodeInput);
+        return driver.findElement(inp_Swiftcode);
     }
     public WebElement gettenureOfAcctSelect() {
-        return driver.findElement(tenureOfAcctSelect);
+        return driver.findElement(slct_tenureOfAcct);
     }
     public WebElement getannualIncomeInput() {
-        return driver.findElement(annualIncomeInput);
+        return driver.findElement(inp_annualIncome);
     }
     public WebElement gethasAdditionalIncomreRadio() {
-        return driver.findElement(hasAdditionalIncomreRadio);
+        return driver.findElement(rad_hasAdditionalIncome);
     }
     public WebElement gettotalAssetSelect() {
-        return driver.findElement(totalAssetSelect);
+        return driver.findElement(slct_totalAsset);
     }
     public WebElement getoccupationSelect() {
-        return driver.findElement(occupationSelect);
+        return driver.findElement(slct_Occupation);
     }
     public WebElement getoccupationDescSelect() {
-        return driver.findElement(occupationDescSelect);
+        return driver.findElement(slct_OccupationDesc);
     }
     public WebElement getmotherMaidenNameInput() {
-        return driver.findElement(motherMaidenNameInput);
+        return driver.findElement(inp_motherMaidenName);
     }
     public WebElement getfirstPinInput() {
-        return driver.findElement(firstPinInput);
+        return driver.findElement(inp_firstPin);
     }
     public WebElement getsecondPinInput() {
-        return driver.findElement(secondPinInput);
+        return driver.findElement(inp_secondPin);
     }
-    public WebElement getreceiveMarketEmailNoRadio() {
-        return driver.findElement(receiveMarketEmailNoRadio);
-    }
-
-    public WebElement getreceiveMarketEmailYesRadio() {
-        return driver.findElement(receiveMarketEmailYesRadio);
-    }
+    public WebElement getreceiveMarketEmailNoRadio() {return driver.findElement(rad_ReceiveMarketEmailNo);}
+    public WebElement getreceiveMarketEmailYesRadio() {return driver.findElement(rad_ReceiveMarketEmailYes);}
     public WebElement getreceiveMarketSmsRadio() {
-        return driver.findElement(receiveMarketSmsRadio);
+        return driver.findElement(rad_ReceiveMarketSms);
     }
-    public WebElement getsubmitBtn() {return driver.findElement(submitButton);}
+    public WebElement getsubmitBtn() {return driver.findElement(btn_Submit);}
     public WebElement getcontinueButton() {
-        return driver.findElement(continueButton);
+        return driver.findElement(btn_Continue);
     }
     public WebElement getacceptCookiesButton() {
-        return driver.findElement(acceptCookiesButton);
+        return driver.findElement(btn_AcceptCookies);
     }
     public WebElement getacceptPrivacy() {
-        return driver.findElement(acceptPrivacy);
+        return driver.findElement(chckbox_acceptPrivacy);
     }
     public WebElement getpasswordInp() {
-        return driver.findElement(passwordInp);
+        return driver.findElement(inp_smsPassword);
     }
     public WebElement getfinalSubmit() {
-        return driver.findElement(finalSubmit);
+        return driver.findElement(btn_finalSubmit);
     }
     public WebElement getfinalPage() {
-        return driver.findElement(finalPageSubmit);
+        return driver.findElement(btn_finalPageSubmit);
     }
 
     //BusinessLogic
@@ -172,17 +165,37 @@ public class userDetailsPage {
     public void enterDOB(String DOB) {getdobInput().sendKeys(DOB);}
     public void enterEmail(String Email) {getemailInput().sendKeys(Email);}
     public void enterMobileNum(String mNum) {getmobileNumberInput().sendKeys(mNum);}
+    public void clickBirthNameCheckbox() {getBirthNameCheckbox().click();}
+    public void enterPOB(String POB) {getplaceOfBirthInput().sendKeys(POB);}
+    public void enterAddrsLine1Input(String value) {getaddrsLine1Input().sendKeys(value);}
+    public void enterPostcode(String value) {getpostcodeInput().sendKeys(value);}
+    public void enterVillage(String value) {getvillageInput().sendKeys(value);}
+    public void enterIban(String value) {getIbanInput().sendKeys(value);}
+    public void enterSwiftCode(String value) {getswiftcodeInput().sendKeys(value);}
+    public void enterAnnualIncome(String value) {getannualIncomeInput().sendKeys(value);}
+    public void clickHasNoAdditionalIncome() {gethasAdditionalIncomreRadio().click();}
+    public void enterMotherMaidenName(String value) {getmotherMaidenNameInput().sendKeys(value);}
+    public void enterFirstPin(String value) {getfirstPinInput().sendKeys(value);}
+    public void enterSecondPin(String value) {getsecondPinInput().sendKeys(value);}
+    public void clickNoEmailRadio() {getreceiveMarketEmailNoRadio().click();}
+    public void clickYesEmailRadio() {getreceiveMarketEmailYesRadio().click();}
+    public void clickSmsYesRadio() {getreceiveMarketSmsRadio().click();}
+    public void clickFinalPageSubmit() {
+        getfinalPage().click();
+    }
+    public void clickContinue() {getcontinueButton().click();}
+    public void clickCookies() {getacceptCookiesButton().click();}
+    public void clickAcceptPrivacy() {getacceptPrivacy().click();}
+    public void enterPassword(String value) {getpasswordInp().sendKeys(value);}
+    public void clickFinal() {getfinalSubmit().click();}
+
+
     public void clickSaveButton() {
         Actions actions = new Actions(driver);
         actions.moveToElement(getsaveButton());
         actions.perform();
         getsaveButton().click();
     }
-    public void clickBirthNameCheckbox() {getBirthNameCheckbox().click();}
-    public void enterPOB(String POB) {getplaceOfBirthInput().sendKeys(POB);}
-    public void enterAddrsLine1Input(String value) {getaddrsLine1Input().sendKeys(value);}
-    public void enterPostcode(String value) {getpostcodeInput().sendKeys(value);}
-    public void enterVillage(String value) {getvillageInput().sendKeys(value);}
 
     public void selectDepOfBirth() {
         Select dropdown = new Select(getdepOfBirthSelect());
@@ -200,16 +213,11 @@ public class userDetailsPage {
         actions.perform();
         getsaveContinueButton().click();
     }
-    public void enterIban(String value) {getIbanInput().sendKeys(value);}
-    public void enterSwiftCode(String value) {getswiftcodeInput().sendKeys(value);}
 
     public void selectTenureOfAcct() {
         Select dropdown = new Select(gettenureOfAcctSelect());
         dropdown.selectByIndex(2);
     }
-
-    public void enterAnnualIncome(String value) {getannualIncomeInput().sendKeys(value);}
-    public void clickHasNoAdditionalIncome() {gethasAdditionalIncomreRadio().click();}
 
     public void selectTotalAsset() {
         Select dropdown = new Select(gettotalAssetSelect());
@@ -224,26 +232,10 @@ public class userDetailsPage {
         dropdown.selectByIndex(1);
     }
 
-    public void enterMotherMaidenName(String value) {getmotherMaidenNameInput().sendKeys(value);}
-    public void enterFirstPin(String value) {getfirstPinInput().sendKeys(value);}
-    public void enterSecondPin(String value) {getsecondPinInput().sendKeys(value);}
-    public void clickNoEmailRadio() {getreceiveMarketEmailNoRadio().click();}
-    public void clickYesEmailRadio() {getreceiveMarketEmailYesRadio().click();}
-    public void clickSmsYesRadio() {getreceiveMarketSmsRadio().click();}
     public void clickSbmtBtn() {
         Actions actions = new Actions(driver);
         actions.moveToElement(getsubmitBtn());
         actions.perform();
         getsubmitBtn().click();
     }
-    public void clickFinalPageSubmit() {
-        getfinalPage().click();
-    }
-    public void clickContinue() {getcontinueButton().click();}
-    public void clickCookies() {getacceptCookiesButton().click();}
-    public void clickAcceptPrivacy() {getacceptPrivacy().click();}
-    public void enterPassword(String value) {getpasswordInp().sendKeys(value);}
-    public void clickFinal() {getfinalSubmit().click();}
-
-
 }

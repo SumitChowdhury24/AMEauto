@@ -3,19 +3,15 @@ package pages;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
-
-import java.time.Duration;
 
 public class ameHomePage {
     WebDriver driver;
 
     //Locators
-    By cartesAmericanExp = By.xpath("//*[text()='Cartes American Express®']");
-    By acceptCookiesButton = By.xpath("//button[text()='Tout Accepter']");
-    By cartesAfKlmAmex = By.xpath("//*[text()='Cartes AF KLM-AMEX']");
-    By cartesPremium = By.xpath("//*[text()='Cartes Premium']");
+    By link_cartesAmericanExp = By.xpath("//*[text()='Cartes American Express®']");
+    By btn_acceptCookies = By.xpath("//button[text()='Tout Accepter']");
+    By link_cartesAfKlmAmex = By.xpath("//*[text()='Cartes AF KLM-AMEX']");
+    By link_cartesPremium = By.xpath("//*[text()='Cartes Premium']");
 
     //Constructor
     public ameHomePage(WebDriver driver) {
@@ -23,24 +19,24 @@ public class ameHomePage {
     }
 
     //BrowserActions
-    public WebElement getcartesAmericanExp() {
-        return driver.findElement(cartesAmericanExp);
+    public WebElement getCartesAmericanExp_link() {
+        return driver.findElement(link_cartesAmericanExp);
     }
 
-    public WebElement getAcceptCookiesButton() {
-        return driver.findElement(acceptCookiesButton);
+    public WebElement getAcceptCookies_Button() {
+        return driver.findElement(btn_acceptCookies);
     }
-    public WebElement getcartesAfKlmAmex() {
-        return driver.findElement(cartesAfKlmAmex);
+    public WebElement getCartesAfKlmAmex_link() {
+        return driver.findElement(link_cartesAfKlmAmex);
     }
 
-    public WebElement cartesPremium() {
-        return driver.findElement(cartesPremium);
+    public WebElement getCartesPremium_link() {
+        return driver.findElement(link_cartesPremium);
     }
 
     //BusinessFlows
     public void clickOnAmrExpCartes(){
-        getcartesAmericanExp().click();
+        getCartesAmericanExp_link().click();
     }
 
     public void clickAcceptCookiesIfPresent(){
@@ -48,7 +44,7 @@ public class ameHomePage {
         while (waitCounter < 5) {
             try {
                 Thread.sleep(1000);
-                getAcceptCookiesButton().click();
+                getAcceptCookies_Button().click();
                 break;
             } catch (Exception e) {
                 waitCounter++;
