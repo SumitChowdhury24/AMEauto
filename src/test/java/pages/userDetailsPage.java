@@ -4,11 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
-import org.openqa.selenium.support.ui.WebDriverWait;
-
-import java.time.Duration;
 
 public class userDetailsPage {
     WebDriver driver;
@@ -44,7 +40,8 @@ public class userDetailsPage {
     //By birthPlaceCheckbox = By.xpath("//input[@type='checkbox' and @name='birthNameCheck']//following-sibling::label[1]");
     By firstPinInput = By.xpath("//input[@id='fieldControl-input-pin']");
     By secondPinInput = By.xpath("//input[@id='fieldControl-input-confirmPin']");
-    By receiveMarketEmailRadio = By.xpath("//input[@type='radio' and @id='marketingEmailPreferences-true']//following-sibling::label[1]");
+    By receiveMarketEmailNoRadio = By.xpath("//input[@type='radio' and @id='marketingEmailPreferences-false']//following-sibling::label[1]");
+    By receiveMarketEmailYesRadio = By.xpath("//input[@type='radio' and @id='marketingEmailPreferences-false']//following-sibling::label[1]");
     By receiveMarketSmsRadio = By.xpath("//input[@type='radio' and @id='marketingSMSPhonePostalPreferences-OPT_OUT']//following-sibling::label[1]");
     By submitButton = By.xpath("//button[text()='Soumettre']");
     By continueButton = By.xpath("//button[text()='Continuer']");
@@ -137,8 +134,12 @@ public class userDetailsPage {
     public WebElement getsecondPinInput() {
         return driver.findElement(secondPinInput);
     }
-    public WebElement getreceiveMarketEmailRadio() {
-        return driver.findElement(receiveMarketEmailRadio);
+    public WebElement getreceiveMarketEmailNoRadio() {
+        return driver.findElement(receiveMarketEmailNoRadio);
+    }
+
+    public WebElement getreceiveMarketEmailYesRadio() {
+        return driver.findElement(receiveMarketEmailYesRadio);
     }
     public WebElement getreceiveMarketSmsRadio() {
         return driver.findElement(receiveMarketSmsRadio);
@@ -226,7 +227,8 @@ public class userDetailsPage {
     public void enterMotherMaidenName(String value) {getmotherMaidenNameInput().sendKeys(value);}
     public void enterFirstPin(String value) {getfirstPinInput().sendKeys(value);}
     public void enterSecondPin(String value) {getsecondPinInput().sendKeys(value);}
-    public void clickNoEmailRadio() {getreceiveMarketEmailRadio().click();}
+    public void clickNoEmailRadio() {getreceiveMarketEmailNoRadio().click();}
+    public void clickYesEmailRadio() {getreceiveMarketEmailYesRadio().click();}
     public void clickSmsYesRadio() {getreceiveMarketSmsRadio().click();}
     public void clickSbmtBtn() {
         Actions actions = new Actions(driver);

@@ -44,14 +44,15 @@ public class ameHomePage {
     }
 
     public void clickAcceptCookiesIfPresent(){
-        try {
-            WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-            WebElement acceptButton = wait.until(ExpectedConditions.elementToBeClickable(acceptCookiesButton));
-
-            acceptButton.click();
-            Thread.sleep(2000);
-        } catch (Exception e) {
-            System.out.println("Accept Cookies button not found: " + e.getMessage());
+        int waitCounter=0;
+        while (waitCounter < 5) {
+            try {
+                Thread.sleep(1000);
+                getAcceptCookiesButton().click();
+                break;
+            } catch (Exception e) {
+                waitCounter++;
+            }
         }
     }
 

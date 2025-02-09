@@ -11,6 +11,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
 import pages.allCardsPage;
 import pages.ameHomePage;
 import pages.goldCardDescPage;
@@ -43,12 +44,14 @@ public class applyForGoldCard {
 
     @And("User clicks on Gold Cart")
     public void userClicksOnGoldCart() {
+        homePage.clickAcceptCookiesIfPresent();
         CardsPage = new allCardsPage(driver);
         CardsPage.clickOnGoldCartesLink();
     }
 
     @And("User clicks on Demand Cart")
     public void userClicksOnDemandCart() {
+        homePage.clickAcceptCookiesIfPresent();
         CardDescPage = new goldCardDescPage(driver);
         CardDescPage.clickOnDemandCartesLink();
     }
@@ -110,11 +113,12 @@ public class applyForGoldCard {
     }
 
     @Then("user enters details in final page {string}")
-    public void userEntersDetailsInFinalPage(String motherName) {
+    public void userEntersDetailsInFinalPage(String motherName){
         userDetailPage.enterMotherMaidenName(motherName);
         userDetailPage.enterFirstPin("1234");
         userDetailPage.enterSecondPin("1234");
         userDetailPage.clickNoEmailRadio();
+        userDetailPage.clickYesEmailRadio();
         userDetailPage.clickSmsYesRadio();
         userDetailPage.clickSbmtBtn();
     }
@@ -131,6 +135,7 @@ public class applyForGoldCard {
                 waitCounter++;
             }
         }
+        Assert.assertTrue(waitCounter<30);
     }
 
     @And("User closes the browser")
