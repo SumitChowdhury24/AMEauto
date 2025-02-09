@@ -113,10 +113,11 @@ public class applyForGoldCard {
     }
 
     @Then("user enters details in final page {string}")
-    public void userEntersDetailsInFinalPage(String motherName){
+    public void userEntersDetailsInFinalPage(String motherName) throws InterruptedException {
         userDetailPage.enterMotherMaidenName(motherName);
         userDetailPage.enterFirstPin("1234");
         userDetailPage.enterSecondPin("1234");
+        Thread.sleep(1000);
         userDetailPage.clickNoEmailRadio();
         userDetailPage.clickYesEmailRadio();
         userDetailPage.clickSmsYesRadio();

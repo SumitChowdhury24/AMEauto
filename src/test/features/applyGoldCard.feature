@@ -11,7 +11,7 @@ Feature: User applies for a Cards
     And User enters bank details as "<IBAN>" "<SwiftCode>" "<AnnualIncome>"
     Then user enters details in final page "<MotherName>"
     And User clicks on Final Submission and validates if user is created
-    #And User closes the browser
+    And User closes the browser
 
     Examples:
       | Salutation | FirstName | LastName | DOB        | Email             | MobileNum  | POB    | Address     | Postcode | Village    | IBAN                   | SwiftCode | AnnualIncome | MotherName |
