@@ -1,6 +1,6 @@
 Feature: User applies for a Cards
 
-  @run
+  @runGoldCardCreation
   Scenario Outline: Application for a Gold Card
     Given User opens Browser and navigates to Aex Url
     When User clicks on apply American Express Cart
